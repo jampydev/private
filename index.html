@@ -1,0 +1,68 @@
+
+
+
+<!-- HTML -->
+
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password</title>
+  <link rel="shortcut icon" href="password-icon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="webprivada.css">
+</head>
+<body>
+
+
+
+
+
+
+  <div class="container entrada">
+    
+    <h1>Sitio Web Privado</h1>
+    <p id="acceder">Ingresa la contraseña para acceder.</p>
+
+
+
+    <form id="password-form">
+       <div class="up">
+        <input type="password" id="password" placeholder=" " required>
+        <label for="password">Password</label>
+       </div>
+       <button type="submit" id="entrar">Ingresar</button>
+    </form>
+
+
+
+    <main class="error" id="error-message"></main>
+
+
+  </div>
+
+
+
+  <div class="loading-modal" id="loading-modal">
+    <div class="loading-content">
+      <div class="spinner"></div>
+      <main>Cargando...</main>
+    </div>
+  </div>
+
+
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h2>Acceso denegado</h2>
+      <p>Has excedido el número máximo de intentos.</p>
+      <button onclick="location.reload()">Intenta de nuevo</button>
+    </div>
+  </div>
+
+
+
+  <script src="webprivada.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+
+
+
+
+  /* Restablece los márgenes y paddings por defecto */
+
+
+* {
+  
+  
+   font-weight: bold;
+   font-family: 'TeXGyreCursor-Regular', monospace;
+   color: #FDFEFE;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+  
+}
+
+  
+ .animate__animated {
+      animation-duration: 2.8s;
+
+ }
+  
+  
+
+body {
+  
+  /* agregarles varios colores bonitos */
+  
+  background: linear-gradient(-45deg, #f2d8d1, #f2b5d4, #b1e8ed, #b1edcb);
+
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  
+}
+
+  
+  @keyframes gradient {
+
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+  
+
+.calculadora {
+
+  background-color: #48bfff;
+  color: white;
+  width: 350px;
+  max-width: 100%;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  box-shadow: 0 0 20px #48bfff;
+
+}
+
+
+.pantalla {
+  
+  grid-column: 1 / 5;
+  background-color: #090c31;
+  padding: 1.5rem;
+  font-size: 2rem;
+  text-align: right;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+
+  
+}
+
+
+.btn {
+  
+  background-color: #006da7;
+  color: white;
+  border: none;
+  padding: 1.5rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+
+}
+
+
+.btn:hover {
+
+  background-color: #004f78;
+  font-weight: bold;
+
+}
+
+
+
+#cero {
+
+
+  grid-column: span 2;
+
+}
+
+
+
+#igual {
+
+  grid-row: span 2;
+  display: grid;
+  place-items: center;
+  background-color: #e65766;
+
+}
+
+#igual:hover {
+
+  background-color: #004f78;
+  font-weight: bold;
+
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+  .calculadora {
+
+   width: 350px;
+  max-width: 100%;
+
+  }
+}
+
+/* Estilo para pantallas pequeñas, como celulares */
+
+@media (max-width: 480px) {
+
+  .calculadora {
+
+    width: 350px;
+  max-width: 100%;
+
+  }
+}
+
+
+  
+  
+
+

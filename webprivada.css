@@ -1,0 +1,463 @@
+
+
+
+
+
+/* Animación De Entrada*/
+
+
+.entrada {
+    
+  opacity: 0; /* Inicia invisible */
+  animation: fadeInEffect 4s forwards; /* Aplica la animación fadeInEffect en 2 segundos */
+    
+}
+
+/* Define la animación de desvanecimiento */
+@keyframes fadeInEffect {
+    
+  from {
+    opacity: 0; /* Comienza invisible */
+  }
+  to {
+    opacity: 1; /* Termina completamente visible */
+      
+  }
+}
+
+
+
+
+    /* General styles */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 90vh;
+      margin: 0;
+      font-family: 'Bitter', serif;
+      background-color: #1a2b38;
+      color: #fff;
+    }
+
+    .container {
+      text-align: center;
+      background: #ffffff;
+      padding: 30px 50px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      color: #333;
+      max-width: 500px;
+      width: 90%;
+    }
+
+    .container h1 {
+      font-size: 40px;
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+      color: #00b894;
+    }
+
+    .container p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .up {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .up input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #969696;
+      border-radius: 5px;
+      font-size: 1rem;
+      outline: none;
+      box-sizing: border-box;
+      transition: border-color 0.3s;
+    }
+
+    .up input:focus {
+      border-color: #00b894;
+      box-shadow: 0 0 5px #00b894;
+    }
+
+    .up label {
+      position: absolute;
+      top: 10px;
+      left: 12px;
+      background: #fff;
+      padding: 0 5px;
+      font-size: 1rem;
+      color: #999;
+      pointer-events: none;
+      transition: 0.3s;
+    }
+
+    .up input:focus + label,
+    .up input:not(:placeholder-shown) + label {
+      top: -10px;
+      font-size: 0.8rem;
+      color: #00b894;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      background: #00b894;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.2rem;
+      font-family: 'Bitter', serif;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #019b75;
+    }
+
+
+    .error {
+      color: #d63031;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      opacity: 0; /* Inicialmente invisible */
+      animation: error 0.8s ease-in-out forwards;
+    }
+    
+    @keyframes error {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    
+
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      color: #333;
+      max-width: 400px;
+    }
+
+    .modal-content h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: #d63031;
+    }
+
+    .modal-content button {
+      background: #d63031;
+      padding: 10px 20px;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .loading-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loading-content {
+      
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      color: #000000;
+      font-family: 'Bitter', serif;
+      max-width: 400px;
+    }
+
+    .loading-content .spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #ddd;
+      border-top: 5px solid #00b894;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 1rem;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Styles */
+
+
+
+
+
+
+
+
+/* Pantallas de hasta 1200px */
+@media only screen and (max-width: 1200px) {
+
+  .container {
+
+    max-width: 600px;
+    padding: 2rem;
+  }
+
+.container h1 {
+
+  font-size: 35px;
+
+}
+ 
+button {
+
+  width: 350px;
+  font-size: 18px;
+  padding: 15px;
+
+}
+
+
+  
+.error {
+
+  font-size: 10px;
+  
+  
+  }
+  
+}
+
+
+
+
+
+
+
+/* Pantallas de hasta 768px (Tabletas) */
+@media only screen and (max-width: 768px) {
+
+  .container {
+    max-width: 80%;
+    padding: 1.5rem;
+  }
+
+  .container h1 {
+    font-size: 1.6rem;
+  }
+
+  button {
+    width: 200px;
+    font-size: 16px;
+    padding: 13px;
+    
+  }
+
+
+  .modal-content {
+    padding: 1.2rem;
+  }
+
+  .modal-content h2 {
+    font-size: 1.1rem;
+  }
+
+  .modal-content button {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+
+  
+.error {
+
+  font-size: 16px;
+  
+  
+  }
+  
+}
+
+
+
+
+
+
+
+
+/* Pantallas de hasta 480px (Móviles pequeños) */
+@media only screen and (max-width: 480px) {
+
+  .container {
+    max-width: 80%;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .container h1 {
+    font-size: 1.4rem;
+
+    
+  }
+
+
+  button {
+    width: 180px;
+    font-size: 15px;
+    padding: 12px;
+  
+  }
+
+  .modal-content {
+    padding: 1rem;
+    max-width: 90%;
+  }
+
+  .modal-content h2 {
+    font-size: 1rem;
+  }
+
+  .modal-content button {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+
+  .loading-content .spinner {
+    width: 30px;
+    height: 30px;
+    border-width: 3px;
+  }
+
+
+  
+.error {
+
+  font-size: 15px;
+  
+  
+  }
+  
+}
+
+
+
+
+
+
+
+/* Pantallas de hasta 320px (Móviles muy pequeños) */
+@media only screen and (max-width: 320px) {
+
+  .container {
+    max-width: 80%;
+    padding: 0.8rem;
+    border-radius: 6px;
+  }
+
+  .container h1 {
+    font-size: 20px;
+  }
+
+  #acceder {
+    font-size: 11px;
+  }
+
+  button {
+
+    width: 125px;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+
+  .up input {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .up label {
+    font-size: 0.7rem;
+  }
+
+  .modal-content {
+    padding: 0.8rem;
+    max-width: 95%;
+  }
+
+  .modal-content h2 {
+    font-size: 0.85rem;
+  }
+
+  .modal-content button {
+    font-size: 0.7rem;
+    padding: 0.4rem;
+  }
+
+  .loading-content .spinner {
+    width: 25px;
+    height: 25px;
+    border-width: 2px;
+  }
+
+
+  .error {
+
+font-size: 10px;
+
+
+}
+
+
+}
+
+
+
+
+
